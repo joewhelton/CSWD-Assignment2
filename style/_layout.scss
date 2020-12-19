@@ -1,0 +1,49 @@
+html, body{
+  height: 100%;
+}
+
+#pageBodyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .page-body {
+    //flex: 1 1 auto;
+    max-width: map_get($container-max-widths, xl);
+    padding-bottom: 1rem;
+  }
+}
+
+figure.article-image{
+  @extend .img-thumbnail;
+  margin: 0.5rem;
+  figcaption{
+    font-style: italic;
+  }
+  img{
+    width: 100%;
+  }
+  &-left{
+    float: left;
+    margin-left: 0;
+  }
+  &-right{
+    float: right;
+    margin-right: 0;
+  }
+}
+
+//Create responsive width classes which Bootstrap is strangely lacking
+//This lets me use classes like "w-sm-100 w-lg-50" to have something full width on small screens
+// and half width on large screens
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}

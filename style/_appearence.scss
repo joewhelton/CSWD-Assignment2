@@ -1,0 +1,49 @@
+html, body{
+  background-color: $gray-300;
+}
+
+.page-body{
+  background-color: $white;
+}
+
+#siteLogo{
+  width: 8rem;
+}
+
+.search-group{
+  #searchBox{
+    font-size: 0.8rem;
+  }
+  button[type=submit]{
+    padding: 0 0.75rem;
+  }
+}
+
+.custom-header{
+  background-color: map_get($theme-colors, "primary");
+  color: $white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+.sidebar-related, .article-preview{
+  header{
+    @extend .custom-header;
+    margin: 0.5rem 0 0 0;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+.brigade-details{
+  margin-top: 1rem;
+
+  summary{
+    @extend .custom-header;
+  }
+  p:first-of-type{
+    padding-top: 0.5rem;
+  }
+}

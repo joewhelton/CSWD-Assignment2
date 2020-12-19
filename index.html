@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cork's War of Independence</title>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap-custom.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+        <img id="siteLogo" src="image/logo-alternative.svg" alt="CWI Logo" title="Cork's War of Independence">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="brigademap.html">Brigade Map</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Brigade Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">First brigade</a>
+                    <a class="dropdown-item" href="#">Second Brigade</a>
+                    <a class="dropdown-item" href="#">Third Brigade</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="input-group search-group">
+                <input id="searchBox" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light" type="submit">Go</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<main class="container-fluid" id="pageBodyContainer">
+    <div class="page-body container">
+        <section class="row">
+            <div class="col-12 col-md-8 order-2 order-md-1">
+                <figure class="article-image w-100">
+                    <picture>
+                        <img src="image/article_images/keating-men-of-the-south.jpeg" alt="Men Of The South painting by Seán Keating"/>
+                    </picture>
+                    <figcaption>Men of the South – Seán Keating's documentary portrayal of the North Cork Brigade of the Irish Republican Army, 1922</figcaption>
+                </figure>
+            </div>
+            <div class="col-12 col-md-4 align-self-center order-1 order-md-2">
+                <picture>
+                    <source media="(min-width: 767px)" srcset="image/site-title-small-for-wide-layouts.png">
+                    <img id="siteTitleImage" src="image/site-title.png" alt="Cork's War of Independence" class="w-100">
+                </picture>
+                <p>
+                    An account of the Anglo-Irish War focusing on events in Cork city and county from 1918 to the truce in July 1921.
+                </p>
+            </div>
+        </section>
+        <section class="row latest-articles">
+            <div class="col-12">
+                <h3>Latest Articles</h3>
+            </div>
+            <div class="col-3 article-preview">
+                <header>Crossbarry</header>
+                <img src="image/article_images/Crossbarry_Monument.jpg" alt="Crossbarry Monument">
+                <p>On March 19, 1921, the Third West Cork Flying Column of the IRA, under the command of the legendary Commandant General Tom Barry, achieved an extremely significant victory at Crossbarry, situated about twelve miles south-west of Cork city.</p>
+                <a href="crossbarry.html" class="btn btn-outline-secondary">Read More</a>
+            </div>
+            <div class="col-3 article-preview">
+
+            </div>
+            <div class="col-3 article-preview">
+
+            </div>
+            <div class="col-3 article-preview">
+
+            </div>
+
+        </section>
+    </div>
+    <footer>
+        Site Copyright 2020 | Contact | About
+    </footer>
+</main>
+</body>
+</html>
