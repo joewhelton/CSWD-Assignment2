@@ -10184,4 +10184,9 @@ summary:focus {
   white-space: nowrap;
 }
 
+.embedded-google-maps {
+  width: 100%;
+  height: 400px;
+}
+
 /*# sourceMappingURL=bootstrap-custom.css.map */

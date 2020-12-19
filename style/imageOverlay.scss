@@ -1,0 +1,25 @@
+.image-map-overlay-container {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 0.2rem;
+
+  .image-map-overlay {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.5rem;
+    img {
+      width: 100%;
+
+      &.base-image {
+        z-index: 1;
+      }
+
+      &.overlay {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
