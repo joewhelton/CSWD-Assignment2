@@ -11,7 +11,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDol8L4FAwZ2SEimbSG7DLNm97axsAZ8Gw&callback=initMap&libraries=&v=weekly" defer></script>
     <script src="../script/imageOverlay.js"></script>
     <link rel="stylesheet" href="../style/imageOverlay.css">
-    <link rel="stylesheet" href="../style/bootstrap-custom.css">
+    <link rel="stylesheet" href="../style/bootstrap-custom.min.css">
 
     <script>
         function initMap() {
@@ -27,7 +27,11 @@
         }
 
         $(document).ready(function(){
-            let overlay = new imageOverlay('overlayContainer', '../image/article_images/overlays/crossbarry_overlay_1.jpg', '../image/article_images/overlays/crossbarry_overlay_2.jpg')
+            let overlay = new imageOverlay(
+                'overlayContainer',
+                '../image/article_images/overlays/crossbarry_overlay_1.jpg',
+                '../image/article_images/overlays/crossbarry_overlay_2.jpg'
+            )
         });
     </script>
 
@@ -86,19 +90,24 @@
     <section class="page-body row">
         <div class="col-12 col-md-8 col-lg-9">
             <h1>The Battle of Crossbarry</h1>
-            <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#article">Article</a></li>
-                <li><a data-toggle="tab" href="#location">Location Info</a></li>
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+                <li>
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#article" role="tab">Article</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#location" role="tab">Location Info</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#media" role="tab">Media</a></li>
             </ul>
             <div class="tab-content">
-            <article id="article" class="tab-pane fade in active">
+                <article id="article" class="tab-pane fade show active">
                     <p>
                         On March 19, 1921, the Third West Cork Flying Column of the IRA, under the command of the legendary Commandant General Tom Barry, achieved an extremely significant victory at Crossbarry, situated about twelve miles south-west of Cork city.
                         A huge encircling operation involving over 1,000 British troops and 120 Auxiliaries was mounted in an attempt to finally eliminate this troublesome column, which at that time was operating at a  total strength of 104 men. Although vastly outnumbered, Tom Barry took the calculated risk of engaging in a stand-up fight with the enemy. At the end of the battle there were at least thirty-nine British soldiers (including five officers) dead and forty-seven wounded, as against three IRA men dead and two wounded.
                     </p>
                     <figure class="article-image article-image-left w-100 w-md-50">
                         <picture>
-                            <img src="../image/article_images/Crossbarry_Monument.jpg" alt="Monument at Crossbarry"/>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Crossbarry_Monument.jpg">
+                            <img src="../image/article_images/Crossbarry_Monument_small.jpg" alt="Monument at Crossbarry"/>
                         </picture>
                         <figcaption>The monument at the site of the Battle of Crossbarry where major losses were inflicted on British forces.</figcaption>
                     </figure>
@@ -116,7 +125,8 @@
                         Shortly after the raiding party left the farmhouse, firing was heard across the bog at Ballymurphy. Another raiding party, led by a Major Hallinan had approached the farmhouse of Denis Forde, which had been brigade headquarters for some months. Present at the time was Charlie Hurley, the Brigade O.C. When the Major hammered at the door demanding entry, Hurley rushed down the stairs and fired through the door, wounding Major Hallinan. He then tried to escape through the back door. Just as he got outside the door, he was shot through the head by a soldier running to cover the rear of the house. The shots that Charlie Hurley fired, and those that killed him, were effectively the first shots of the Crossbarry Battle.</p>
                     <figure class="article-image article-image-right w-100 w-md-50">
                         <picture>
-                            <img src="../image/article_images/Crossbarry_Harolds_Farmyard.jpg" alt="Harold's Farmyard Crossbarry"/>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Crossbarry_Harolds_Farmyard.jpg">
+                            <img src="../image/article_images/Crossbarry_Harolds_Farmyard_small.jpg" alt="Harold's Farmyard Crossbarry"/>
                         </picture>
                         <figcaption>Harolds' farmyard where Flor Begley marched and played his warpipes throughout the battle.</figcaption>
                     </figure>
@@ -132,7 +142,8 @@
                         The British troops left the quarry road and advanced up O'Driscolls old road, to get behind the rear flank of the column. Now Kelleher was confronted by a vastly superior force. Some of the troops went around the back of O'Driscolls, making for the high ground on Skeheenahaine Hill. Kelleher knew that if the British succeeded in gaining the hill their only line of withdrawal would be sealed off. He also realised that his group of 14 men could not withstand a frontal attack from this superior force. Kelleher - the great tactician that he was, laid his own traps for the enemy. Across a stream to the left of Kellehers position were the ruins of Ballyhandle Castle in what is a large undulating field. He now dispatched two men, Dan Mehigan (Captain of the Bandon Company) and Con Lehane (Captain of the Timoleague Company) to the ruins with orders to hold their fire until the enemy, who were approaching the ruins from behind O'Driscolls farm, were well into the open field and then to shoot the officer leading the advance. While the advance guard of this detachment were moving towards the castle ruins, Kellehers section opened fire on the main body of troops who were advancing across the valley (from O'Driscolls old road) with the obvious intention of joining up again with the detachment who skirted behind the farmhouse.</p>
                     <figure class="article-image article-image-left w-100 w-md-50">
                         <picture>
-                            <img src="../image/article_images/Crossbarry_Ballymurphy.jpg" alt="Ballymurphy Memorial"/>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Crossbarry_Ballymurphy.jpg">
+                            <img src="../image/article_images/Crossbarry_Ballymurphy_small.jpg" alt="Ballymurphy Memorial"/>
                         </picture>
                         <figcaption>Roadside memorial at Ballymurphy indicating the location where Charlie Hurley, Brigade O.C. was shot dead</figcaption>
                     </figure>
@@ -155,11 +166,12 @@
                 </article>
                 <section id="location" class="tab-pane fade in">
                     <h2>Google Maps</h2>
-                    <div id="map" class="embedded-google-maps">
-
-                    </div>
+                    <div id="map" class="embedded-google-maps"></div>
                     <h2>Overlay</h2>
                     <div id="overlayContainer"></div>
+                </section>
+                <section id="media" class="tab-pane fade in media-tab">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vZXs146ifbQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </section>
             </div>
         </div>
@@ -167,6 +179,18 @@
             <header>
                 Related Articles
             </header>
+            <section>
+                <h3>Rathcoole</h3>
+                <img src="../image/article_images/Rathcoole_Monument_thumb.jpg" alt="Rathcoole Monument">
+                <p>One of the largest ambushes of the War of Independence took place at Rathcoole, North Cork, situated between Millstreet and Banteer, on 16th. June 1921.</p>
+                <a href="rathcoole.html">Read More</a>
+            </section>
+            <section>
+                <h3>Toureen</h3>
+                <img src="../image/article_images/Toureen_thumb.jpg" alt="Toureen Farmhouse">
+                <p>One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City.</p>
+                <a href="toureen.html">Read More</a>
+            </section>
         </aside>
     </section>
     <footer>

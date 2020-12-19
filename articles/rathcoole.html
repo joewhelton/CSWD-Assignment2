@@ -8,7 +8,22 @@
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../style/bootstrap-custom.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDol8L4FAwZ2SEimbSG7DLNm97axsAZ8Gw&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="../style/bootstrap-custom.min.css">
+
+    <script>
+        function initMap() {
+            const Rathcoole = { lat: 52.08645158052733, lng: -9.003161808299968 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: Rathcoole,
+            });
+            const marker = new google.maps.Marker({
+                position: Rathcoole,
+                map: map,
+            });
+        }
+    </script>
 
 </head>
 <body>
@@ -64,38 +79,72 @@
 <main class="container-fluid" id="pageBodyContainer">
     <section class="page-body row">
         <div class="col-12 col-md-8 col-lg-9">
-            <article>
-                <h1>Auxiliaries Suffer Major Reverse at Rathcoole</h1>
-                <p>
-                    One of the largest ambushes of the War of Independence took place at Rathcoole, North Cork, situated between Millstreet and Banteer, on 16th. June 1921.</p>
-                <figure class="article-image article-image-left w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Rathcoole_Road.jpg" alt="Rathcoole Road"/>
-                    </picture>
-                    <figcaption>The section of the roadway at Rathcoole where a fierce battle took place between North Cork volunteers and British Auxiliary forces in 1921</figcaption>
-                </figure>
-                <p>
-                    The railway line between Banteer and Millstreet had been cut in several places so the Auxiliary forces based at Millstreet had to travel to Banteer by road for their supplies a couple of times every week. Therefore, a combined force of 130 men were mobilised to attack the Auxiliaries as they returned from Banteer. The volunteers were from the Millstreet, Kanturk, Newmarket, Charleville and Mallow battalion columns in the second division area and were under the command of Paddy O'Brien from Liscarroll.</p>
-                <p>
-                    On the night before the ambush the I.R.A. volunteers slept at Rathcoole Wood, which overlooked the planned ambush position. Shortly after sunrise the following morning, Captain Dan Vaughan laid six landmines on the untarred road and covered them with dust. After a wait of several hours a convoy of four armour-plated lorries, each mounted with a machine gun and carrying ten men, was observed heading for Banteer. </p>
-                <p>
-                    The volunteers prepared and at 6.20 in the evening, as the lorries passed through the ambush area on their return journey, three of the landmines which had been placed on the road exploded with devastating results. One mine detonated as the last of the four lorries drove over it, another exploded under the leading lorry in the convoy. Both vehicles were out of action with the two other lorries were trapped between them. A third mine exploded amid a party of Auxiliaries as they attempted to outflank the position. A bitter firefight developed.  Each time Auxiliaries tried to outflank the I.R.A. they were driven back, suffering losses of more than twenty dead and over a dozen wounded.</p>
-                <figure class="article-image article-image-right w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Rathcoole_Monument.jpg" alt="Rathcoole Monument"/>
-                    </picture>
-                    <figcaption>Monument erected at the site of the ambush</figcaption>
-                </figure>
-                <p>
-                    When it became clear that the I.R.A. could not achieve a complete victory because of their limited ammunition supply, the order for withdrawal was given and the whole force retired without a single casualty. Although no arms were captured during the action, a reconnaissance party from the column, which returned next day to search the ambush position, recovered 1,350 rounds of ammunition which the Auxiliaries had left behind them as they removed their dead and wounded.</p>
-                <p>
-                    The ambush at Rathcoole was one of the Irish Republican Army’s most successful actions during the War of Independence. A week after the ambush British Forces from Kanturk, Buttevant, Ballyvonaire, Macroom, Ballincollig, Killarney and Tralee carried out a widespread search throughout the Rathcoole area. Michael Dineen, a Volunteer in Kilcorney Company was taken from his brother’s house at Ivale by a party of Auxiliaries and shot dead. On the evening of July 1st. the Auxiliaries set fire to and destroyed the wood at Rathcoole, from where the ambush had been launched. The same day that they shot and killed local man Bernard Moynihan as he was out cutting hay.</p>
-            </article>
+            <h1>Auxiliaries Suffer Major Reverse at Rathcoole</h1>
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+                <li>
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#article" role="tab">Article</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#location" role="tab">Location Info</a></li>
+            </ul>
+            <div class="tab-content">
+                <article id="article" class="tab-pane fade show active">
+                    <p>
+                        One of the largest ambushes of the War of Independence took place at Rathcoole, North Cork, situated between Millstreet and Banteer, on 16th. June 1921.</p>
+                    <figure class="article-image article-image-left w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Rathcoole_Road.jpg">
+                            <img src="../image/article_images/Rathcoole_Road_small.jpg" alt="Rathcoole Road"/>
+                        </picture>
+                        <figcaption>The section of the roadway at Rathcoole where a fierce battle took place between North Cork volunteers and British Auxiliary forces in 1921</figcaption>
+                    </figure>
+                    <p>
+                        The railway line between Banteer and Millstreet had been cut in several places so the Auxiliary forces based at Millstreet had to travel to Banteer by road for their supplies a couple of times every week. Therefore, a combined force of 130 men were mobilised to attack the Auxiliaries as they returned from Banteer. The volunteers were from the Millstreet, Kanturk, Newmarket, Charleville and Mallow battalion columns in the second division area and were under the command of Paddy O'Brien from Liscarroll.</p>
+                    <p>
+                        On the night before the ambush the I.R.A. volunteers slept at Rathcoole Wood, which overlooked the planned ambush position. Shortly after sunrise the following morning, Captain Dan Vaughan laid six landmines on the untarred road and covered them with dust. After a wait of several hours a convoy of four armour-plated lorries, each mounted with a machine gun and carrying ten men, was observed heading for Banteer. </p>
+                    <p>
+                        The volunteers prepared and at 6.20 in the evening, as the lorries passed through the ambush area on their return journey, three of the landmines which had been placed on the road exploded with devastating results. One mine detonated as the last of the four lorries drove over it, another exploded under the leading lorry in the convoy. Both vehicles were out of action with the two other lorries were trapped between them. A third mine exploded amid a party of Auxiliaries as they attempted to outflank the position. A bitter firefight developed.  Each time Auxiliaries tried to outflank the I.R.A. they were driven back, suffering losses of more than twenty dead and over a dozen wounded.</p>
+                    <figure class="article-image article-image-right w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Rathcoole_Monument.jpg">
+                            <img src="../image/article_images/Rathcoole_Monument_small.jpg" alt="Rathcoole Monument"/>
+                        </picture>
+                        <figcaption>Monument erected at the site of the ambush</figcaption>
+                    </figure>
+                    <p>
+                        When it became clear that the I.R.A. could not achieve a complete victory because of their limited ammunition supply, the order for withdrawal was given and the whole force retired without a single casualty. Although no arms were captured during the action, a reconnaissance party from the column, which returned next day to search the ambush position, recovered 1,350 rounds of ammunition which the Auxiliaries had left behind them as they removed their dead and wounded.</p>
+                    <p>
+                        The ambush at Rathcoole was one of the Irish Republican Army’s most successful actions during the War of Independence. A week after the ambush British Forces from Kanturk, Buttevant, Ballyvonaire, Macroom, Ballincollig, Killarney and Tralee carried out a widespread search throughout the Rathcoole area. Michael Dineen, a Volunteer in Kilcorney Company was taken from his brother’s house at Ivale by a party of Auxiliaries and shot dead. On the evening of July 1st. the Auxiliaries set fire to and destroyed the wood at Rathcoole, from where the ambush had been launched. The same day that they shot and killed local man Bernard Moynihan as he was out cutting hay.</p>
+                </article>
+                <section id="location" class="tab-pane fade in">
+                    <h2>Google Maps</h2>
+                    <div id="map" class="embedded-google-maps"></div>
+                    <h2>Location Sketch</h2>
+                    <figure class="article-image">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Rathcoole_map.jpg">
+                            <img src="../image/article_images/Rathcoole_map_small.jpg" alt="Rathcoole map sketch">
+                        </picture>
+                        <figcaption>A contemporary sketch of the ambush location</figcaption>
+                    </figure>
+                </section>
+            </div>
         </div>
         <aside class="col-12 col-md-4 col-lg-3 sidebar-related">
             <header>
                 Related Articles
             </header>
+            <section>
+                <h3>Toureen</h3>
+                <img src="../image/article_images/Toureen_thumb.jpg" alt="Toureen Farmhouse">
+                <p>One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City.</p>
+                <a href="articles/toureen.html">Read More</a>
+            </section>
+            <section>
+                <h3>Dillon's Cross</h3>
+                <img src="../image/article_images/Dillons_Cross_thumb.jpg" alt="Dillon's Cross">
+                <p>On December 11th, 1920, the day after martial law was proclaimed, a six-man IRA squad from the 1st. Battalion, ambushed a convoy from K Company of the Auxiliary Division at Dillon’s Cross, not far from Victoria Barracks in Cork City.</p>
+                <a href="articles/dillonscross.html">Read More</a>
+            </section>
         </aside>
     </section>
     <footer>

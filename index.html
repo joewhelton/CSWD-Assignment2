@@ -8,7 +8,7 @@
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style/bootstrap-custom.css">
+    <link rel="stylesheet" href="style/bootstrap-custom.min.css">
 
 </head>
 <body>
@@ -67,7 +67,8 @@
             <div class="col-12 col-md-8 order-2 order-md-1">
                 <figure class="article-image w-100">
                     <picture>
-                        <img src="image/article_images/keating-men-of-the-south.jpeg" alt="Men Of The South painting by Seán Keating"/>
+                        <source media="(min-width: 767px)" srcset="image/article_images/keating-men-of-the-south.jpeg">
+                        <img src="image/article_images/keating-men-of-the-south-small.jpg" alt="Men Of The South painting by Seán Keating"/>
                     </picture>
                     <figcaption>Men of the South – Seán Keating's documentary portrayal of the North Cork Brigade of the Irish Republican Army, 1922</figcaption>
                 </figure>
@@ -90,25 +91,25 @@
                 <header>Crossbarry</header>
                 <img src="image/article_images/Crossbarry_Monument_thumb.jpg" alt="Crossbarry Monument">
                 <p>On March 19, 1921, the Third West Cork Flying Column of the IRA, under the command of the legendary Commandant General Tom Barry, achieved an extremely significant victory at Crossbarry, situated about twelve miles south-west of Cork city.</p>
-                <a href="articles/crossbarry.html" class="btn btn-outline-secondary">Read More</a>
+                <a href="articles/crossbarry.html" class="btn btn-secondary">Read More</a>
             </div>
             <div class="col-12 col-sm-6 col-md-3 article-preview">
                 <header>Dillon's Cross</header>
                 <img src="image/article_images/Dillons_Cross_thumb.jpg" alt="Dillon's Cross today">
                 <p>On December 11th, 1920, the day after martial law was proclaimed, a six-man IRA squad from the 1st. Battalion, ambushed a convoy from K Company of the Auxiliary Division at Dillon’s Cross, not far from Victoria Barracks in Cork City.</p>
-                <a href="articles/dillonscross.html" class="btn btn-outline-secondary">Read More</a>
+                <a href="articles/dillonscross.html" class="btn btn-secondary">Read More</a>
             </div>
             <div class="col-12 col-sm-6 col-md-3 article-preview">
                 <header>Rathcoole</header>
                 <img src="image/article_images/Rathcoole_Monument_thumb.jpg" alt="Rathcoole Monument">
                 <p>One of the largest ambushes of the War of Independence took place at Rathcoole, North Cork, situated between Millstreet and Banteer, on 16th. June 1921.</p>
-                <a href="articles/rathcoole.html" class="btn btn-outline-secondary">Read More</a>
+                <a href="articles/rathcoole.html" class="btn btn-secondary">Read More</a>
             </div>
             <div class="col-12 col-sm-6 col-md-3 article-preview">
                 <header>Toureen</header>
                 <img src="image/article_images/Toureen_thumb.jpg" alt="Farmhouse at Toureen">
                 <p>One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City</p>
-                <a href="articles/toureen.html" class="btn btn-outline-secondary">Read More</a>
+                <a href="articles/toureen.html" class="btn btn-secondary">Read More</a>
             </div>
         </section>
     </div>

@@ -8,8 +8,22 @@
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../style/bootstrap-custom.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDol8L4FAwZ2SEimbSG7DLNm97axsAZ8Gw&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="../style/bootstrap-custom.min.css">
 
+    <script>
+        function initMap() {
+            const Dillons = { lat: 51.90917712038953, lng: -8.455001558764296 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: Dillons,
+            });
+            const marker = new google.maps.Marker({
+                position: Dillons,
+                map: map,
+            });
+        }
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
@@ -64,48 +78,80 @@
 <main class="container-fluid" id="pageBodyContainer">
     <section class="page-body row">
         <div class="col-12 col-md-8 col-lg-9">
-            <article>
-                <h1>The Battle of Crossbarry</h1>
-                <p>
-                    On Saturday, 11th., December, 1920, the day after martial law was proclaimed, a six-man IRA squad from the 1st. Battalion, consisting of Captain Sean O'Donoghue and Volunteers James O'Mahoney, Michael Baylor, Augustine O'Leary, Sean Healy and Michael Kenny, ambushed a convoy from K Company of the Auxiliary Division at Dillon’s Cross, not far from Victoria Barracks in Cork City. British forces sustained casualties of one dead and twelve wounded, while the IRA squad escaped unharmed.</p>
-                <figure class="article-image article-image-left w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Dillons_Cross.jpg" alt="Dillon's Cross today"/>
-                    </picture>
-                    <figcaption>A recent picture of Dillon's Cross. A number of these  houses were subsequently rebuilt, having been destroyed by the Auxiliaries immediately after the ambush.</figcaption>
-                </figure>
-                <p>
-                    The usual route taken by military convoys to or from the barracks took them past Dillon’s Cross. There was an old stone wall roughly 50 yards long running between Balmoral Terrace and the houses at the corner of the Cross. It was here that the members of A Company decided to lay their ambush. Behind the wall was a field known as 'O'Callaghan's Field', leading down to Gouldings Glen, which would provide an excellent escape route for the ambush party. Due to the proximity of Victoria Barracks - just a few hundred yards, the action would have to be quick. It was planned to stop the convoy of Auxiliaries, hurl bombs into the lorries, fire a quick volley of revolver shots and get away as rapidly as possible.</p>
-                <p>
-                    Under cover of darkness, five men took up positions behind the stone wall, which was about four feet from the road on which the lorries would pass. Michael Kenny took up position at Harrington Square, on the opposite side of the road to the ambush party and within lorry braking distance of the ambush position. Kenny wore a mackintosh overcoat, scarf and cap to give the impression that he was an off-duty British soldier. Kenny's task was to act as a lookout and to slow down the lorries as they approached the ambush position.</p>
-                <figure class="article-image article-image-right w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Dillons_Cross_Harrington_Square.jpg" alt="Harrington's Square at Dillon's Cross"/>
-                    </picture>
-                    <figcaption>Michael Kenny waited at the footpath in the foreground as the British lorries travelled down Old Youghal Road from Victoria Barracks.</figcaption>
-                </figure>
-                <p>
-                    At approximately 8p.m. the two lorries, each containing thirteen Auxiliaries, left the barracks and drove towards Dillon’s Cross. As the leading lorry approached Harrington Square, Michael Kenny stepped out to the edge of the footpath, put up his hand and signalled the driver to stop. The driver of the leading lorry started to slow down. As the second lorry passed, Kenny he gave two blasts on a whistle, signalling to the men behind the wall that there were two lorries on the road. His task complete, Kenny made his escape to an IRA hideout in Rathcooney.</p>
-                <p>
-                    Once the whistle was blown the entire ambush party stood up, hurling bombs at their targets. Michael Baylor and Augustine O'Leary each threw a bomb towards the first lorry while James O'Mahony, Sean Healy and Sean O'Donoghue each threw a bomb towards the second lorry. As the bombs exploded, they then drew their revolvers and fired a volley of rounds into the Auxiliaries, before making their escape, scattering in different directions. Augustine O'Leary, Michael Baylor and Sean Healy headed towards the city, while James O'Mahony and Sean O'Donoghue made their way to the Delany farm at Dublin Hill. Sean O'Donoghue was carrying the unused bombs and these were hidden on the Delany land after which the two men split up and went 'on the run'.</p>
-                <figure class="article-image article-image-left w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Dillons_Cross_Wall.jpg" alt="Dillon's Cross wall"/>
-                    </picture>
-                    <figcaption>A section of the wall from behind which the IRA attackers threw bombs and fired at the lorries carrying the Auxiliaries.</figcaption>
-                </figure>
-                <p>
-                    The ambush at Dillon’s Cross heralded a night of arson and terror for the citizens of Cork, culminating in the burning of a large part of the city centre. The Auxiliaries were enraged by the IRA's action. Once their wounded com­rades were brought back to Victoria Barracks they decided to exact their revenge. A number of lorries carrying heavily armed members of the garrison left Victoria Barracks for Dillon's Cross. When they arrived at their destination the troops dismounted, made their way to a number of houses and forced the occupants on to the street. Once the houses were empty, the troops set them on fire. Included among the houses singled out for destruction was the home of Brian Dillon, the prominent Cork Fenian after whom the crossroads was named. The Auxiliaries stood guard as the houses burned and anyone who tried to save their property was immediately fired on.</p>
-                <p>
-                    The official British account of the incident was issued as follows:</p>
-                <p>
-                    <i>Twelve cadets were wounded, and one has since died of wounds. Bombs are believed to have been thrown from houses at Dillon’s Cross, in the north district of Cork, into lorries containing cadets as they were leaving Cork military barracks. And it is suggested that the bombs used were supplied to the assailants from the bomb factory which was discovered in Dublin, and in connection with which four men have been arrested. The ambush took place at 8 p.m. ... So far as can be ascertained, the attackers of the ambushed cadets escaped.</i></p>
-            </article>
+            <h1>Dillon's Cross Ambush</h1>
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+                <li>
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#article" role="tab">Article</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#location" role="tab">Location Info</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#media" role="tab">Media</a></li>
+            </ul>
+            <div class="tab-content">
+                <article id="article" class="tab-pane fade show active">
+                    <p>
+                        On Saturday, 11th., December, 1920, the day after martial law was proclaimed, a six-man IRA squad from the 1st. Battalion, consisting of Captain Sean O'Donoghue and Volunteers James O'Mahoney, Michael Baylor, Augustine O'Leary, Sean Healy and Michael Kenny, ambushed a convoy from K Company of the Auxiliary Division at Dillon’s Cross, not far from Victoria Barracks in Cork City. British forces sustained casualties of one dead and twelve wounded, while the IRA squad escaped unharmed.</p>
+                    <figure class="article-image article-image-left w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Dillons_Cross.jpg">
+                            <img src="../image/article_images/Dillons_Cross_small.jpg" alt="Dillon's Cross today"/>
+                        </picture>
+                        <figcaption>A recent picture of Dillon's Cross. A number of these  houses were subsequently rebuilt, having been destroyed by the Auxiliaries immediately after the ambush.</figcaption>
+                    </figure>
+                    <p>
+                        The usual route taken by military convoys to or from the barracks took them past Dillon’s Cross. There was an old stone wall roughly 50 yards long running between Balmoral Terrace and the houses at the corner of the Cross. It was here that the members of A Company decided to lay their ambush. Behind the wall was a field known as 'O'Callaghan's Field', leading down to Gouldings Glen, which would provide an excellent escape route for the ambush party. Due to the proximity of Victoria Barracks - just a few hundred yards, the action would have to be quick. It was planned to stop the convoy of Auxiliaries, hurl bombs into the lorries, fire a quick volley of revolver shots and get away as rapidly as possible.</p>
+                    <p>
+                        Under cover of darkness, five men took up positions behind the stone wall, which was about four feet from the road on which the lorries would pass. Michael Kenny took up position at Harrington Square, on the opposite side of the road to the ambush party and within lorry braking distance of the ambush position. Kenny wore a mackintosh overcoat, scarf and cap to give the impression that he was an off-duty British soldier. Kenny's task was to act as a lookout and to slow down the lorries as they approached the ambush position.</p>
+                    <figure class="article-image article-image-right w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Dillons_Cross_Harrington_Square.jpg">
+                            <img src="../image/article_images/Dillons_Cross_Harrington_Square_small.jpg" alt="Harrington's Square at Dillon's Cross"/>
+                        </picture>
+                        <figcaption>Michael Kenny waited at the footpath in the foreground as the British lorries travelled down Old Youghal Road from Victoria Barracks.</figcaption>
+                    </figure>
+                    <p>
+                        At approximately 8p.m. the two lorries, each containing thirteen Auxiliaries, left the barracks and drove towards Dillon’s Cross. As the leading lorry approached Harrington Square, Michael Kenny stepped out to the edge of the footpath, put up his hand and signalled the driver to stop. The driver of the leading lorry started to slow down. As the second lorry passed, Kenny he gave two blasts on a whistle, signalling to the men behind the wall that there were two lorries on the road. His task complete, Kenny made his escape to an IRA hideout in Rathcooney.</p>
+                    <p>
+                        Once the whistle was blown the entire ambush party stood up, hurling bombs at their targets. Michael Baylor and Augustine O'Leary each threw a bomb towards the first lorry while James O'Mahony, Sean Healy and Sean O'Donoghue each threw a bomb towards the second lorry. As the bombs exploded, they then drew their revolvers and fired a volley of rounds into the Auxiliaries, before making their escape, scattering in different directions. Augustine O'Leary, Michael Baylor and Sean Healy headed towards the city, while James O'Mahony and Sean O'Donoghue made their way to the Delany farm at Dublin Hill. Sean O'Donoghue was carrying the unused bombs and these were hidden on the Delany land after which the two men split up and went 'on the run'.</p>
+                    <figure class="article-image article-image-left w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Dillons_Cross_Wall.jpg">
+                            <img src="../image/article_images/Dillons_Cross_Wall_small.jpg" alt="Dillon's Cross wall"/>
+                        </picture>
+                        <figcaption>A section of the wall from behind which the IRA attackers threw bombs and fired at the lorries carrying the Auxiliaries.</figcaption>
+                    </figure>
+                    <p>
+                        The ambush at Dillon’s Cross heralded a night of arson and terror for the citizens of Cork, culminating in the burning of a large part of the city centre. The Auxiliaries were enraged by the IRA's action. Once their wounded com­rades were brought back to Victoria Barracks they decided to exact their revenge. A number of lorries carrying heavily armed members of the garrison left Victoria Barracks for Dillon's Cross. When they arrived at their destination the troops dismounted, made their way to a number of houses and forced the occupants on to the street. Once the houses were empty, the troops set them on fire. Included among the houses singled out for destruction was the home of Brian Dillon, the prominent Cork Fenian after whom the crossroads was named. The Auxiliaries stood guard as the houses burned and anyone who tried to save their property was immediately fired on.</p>
+                    <p>
+                        The official British account of the incident was issued as follows:</p>
+                    <p>
+                        <i>Twelve cadets were wounded, and one has since died of wounds. Bombs are believed to have been thrown from houses at Dillon’s Cross, in the north district of Cork, into lorries containing cadets as they were leaving Cork military barracks. And it is suggested that the bombs used were supplied to the assailants from the bomb factory which was discovered in Dublin, and in connection with which four men have been arrested. The ambush took place at 8 p.m. ... So far as can be ascertained, the attackers of the ambushed cadets escaped.</i></p>
+                </article>
+                <section id="location" class="tab-pane fade in">
+                    <h2>Google Maps</h2>
+                    <div id="map" class="embedded-google-maps"></div>
+                </section>
+                <section id="media" class="tab-pane fade in media-tab">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yxRz_PbbTWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section>
+            </div>
         </div>
         <aside class="col-12 col-md-4 col-lg-3 sidebar-related">
             <header>
                 Related Articles
             </header>
+            <section>
+                <h3>Toureen</h3>
+                <img src="../image/article_images/Toureen_thumb.jpg" alt="Toureen Farmhouse">
+                <p>One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City.</p>
+                <a href="toureen.html">Read More</a>
+            </section>
+            <section>
+                <h3>Crossbarry</h3>
+                <img src="../image/article_images/Crossbarry_Monument_thumb.jpg" alt="Crossbarry Monument">
+                <p>On March 19, 1921, the Third West Cork Flying Column of the IRA, under the command of the legendary Commandant General Tom Barry, achieved an extremely significant victory at Crossbarry, situated about twelve miles south-west of Cork city.</p>
+                <a href="crossbarry.html">Read More</a>
+            </section>
         </aside>
     </section>
     <footer>

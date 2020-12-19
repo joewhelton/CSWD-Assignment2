@@ -8,7 +8,22 @@
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../style/bootstrap-custom.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDol8L4FAwZ2SEimbSG7DLNm97axsAZ8Gw&callback=initMap&libraries=&v=weekly" defer></script>
+    <link rel="stylesheet" href="../style/bootstrap-custom.min.css">
+
+    <script>
+        function initMap() {
+            const Toureen = { lat: 51.78818686437576, lng: -8.609098903088372 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: Toureen,
+            });
+            const marker = new google.maps.Marker({
+                position: Toureen,
+                map: map,
+            });
+        }
+    </script>
 
 </head>
 <body>
@@ -64,42 +79,67 @@
 <main class="container-fluid" id="pageBodyContainer">
     <section class="page-body row">
         <div class="col-12 col-md-8 col-lg-9">
-            <article>
-                <h1>Essex Regiment Suffer Defeat at Toureen</h1>
-                <p>
-                    One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City,</p>
-                <p>
-                    At 4 a.m. on October 26th 1920, the column moved to occupy positions at Toureen, situated about seven and a half miles from Bandon.  At about 7 a.m. they arrived at a large house, belonging to a loyalist family named Roberts, which stood about twenty yards back from the road. All the occupants of the house were made prisoner and as the farm workers arrived, they were also held.</p>
-                <figure class="article-image article-image-right w-100 w-md-50">
-                    <picture>
-                        <img src="../image/article_images/Toureen.jpg" alt="Toureen ambush site"/>
-                    </picture>
-                    <figcaption>Site of the Toureen ambush showing the house owned by the Roberts family</figcaption>
-                </figure>
-                <p>
-                    The plan of attack was reviewed once again. Unarmed men were to signal the approach of the lorries. Two riflemen each were to cover the western and eastern flank of the column. The rear flank was also protected by two riflemen. While two lorries were expected, provision had to be made to attack a third. Therefore, another five men were sent to occupy positions about sixty yards west of the point where the attack on the second lorry was planned.</p>
-                <p>
-                    This meant that there were only twenty one riflemen to attack the first two lorries which normally carried about thirty soldiers. Nine men, with Liam Deasy in charge, were placed eighty yards east of Roberts' house, behind the ditch on the southern side of the road. Closer to the house, hidden behind a hedge, were Charlie Hurley and two riflemen. He was to explode mine under the first lorry, and then his small party and the eastern section were to open fire on the occupants, if that was needed to ensure their surrender. Sixty yards west of where the mine was placed, and behind a large timber gate which opened from the farmyard on to the road, a section of ten riflemen were in position to attack the second lorry. Ropes were fixed on the gate, which was to remain loosely closed until  When the rear of the first lorry was in line with it ropes attached to the gate were to be pulled immediately, and when the gate flew open, five men kneeling and five standing directly behind them were to be ready to fire a volley at their target, at a distance of only five or six yards. This aspect of the plan was practiced at least half-a-dozen times in order that there could be no slip-up. This section was expected to deal with the second lorry without help. By 8 a.m. all men were posted.</p>
-                <p>
-                    A little more than an hour later the scouts signalled the approach of the British convoy, and soon the waiting volunteers could hear the noise of its engines. On that morning only two lorries had set out from Bandon, the first, carrying a sergeant, six soldiers and a civilian court witness. The second lorry was occupied, according to British sources, by Lieutenant Dixon, attached to the 1st Essex regiment, a driver and six soldiers.</p>
-                <p>
-                    As the first British lorry passed over the mine Charlie Hurley depressed the plunger of his exploder. Nothing happened and the lorry drove on towards Cork City. Deasy's party, who were awaiting the explosion of the mine before opening fire, allowed this vehicle to pass them unscathed, and managed only to fire a few ineffectual rounds at its receding tailboard.</p>
-                <p>
-                    Almost immediately the second lorry appeared and as her bonnet showed the order to fire was given. The volley sounded as one long loud shot. A three pound bomb was also thrown, which landed right in the body of the lorry but did not explode. The lorry skidded to a halt on the side of the road twenty yards from the gate, and the soldiers leaped out, led by their officer, Captain Dickson, and the fight was on. The enemy opened fire as they lay on the road facing the gate section.</p>
-                <p>
-                    The IRA men moved from behind the gate out on to the road. They now faced the Essex, whose shooting appeared to be wayward. Volley after volley was fired by the volunteers. Captain Dickson was shot through the head as he fired his revolver and soon more British soldiers were hit, some fatally. Before long the remainder of the British surrendered, raising their hands over their heads. Immediately the whistle to cease fire was blown and an order was given to divest the enemy of their arms and equipment.</p>
-                <p>
-                    The Brigade Commander came on to the road. He was disgusted at the failure of the mine and the escape of the first lorry. That lorry sped on and never halted until it reached Victoria Barracks in Cork city.</p>
-                <p>
-                    Five of the enemy were dead, including Captain Dickson and four were wounded. Fourteen rifles, bayonets, equipment, some Mills bombs, fourteen hundred rounds, as well as the officers' revolvers and equipment were secured from them. Not one of the IRA was hit. The members of the Column helped to make the wounded Essex comfortable and supplied bandages to the unwounded for their comrades. An Essex sergeant, who was now in charge, thanked the IRA for their fair treatment. The dead were pulled away from the vicinity of the lorry which was sprinkled with petrol and set alight.</p>
-                <p>
-                    Within fifteen minutes of the opening of the attack, the IRA column had re-assembled and quickly moved off in the direction of Kilbrittain.</p>
-            </article>
+            <h1>Essex Regiment Suffer Defeat at Toureen</h1>
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+                <li>
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#article" role="tab">Article</a></li>
+                <li>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#location" role="tab">Location Info</a></li>
+            </ul>
+            <div class="tab-content">
+                <article id="article" class="tab-pane fade show active">
+                    <p>
+                        One of the first major ambushes carried out by the West Cork Brigade Flying Column under Tom Barry was at Toureen, near Ballinhassig, on the old main road between Bandon and Cork City,</p>
+                    <p>
+                        At 4 a.m. on October 26th 1920, the column moved to occupy positions at Toureen, situated about seven and a half miles from Bandon.  At about 7 a.m. they arrived at a large house, belonging to a loyalist family named Roberts, which stood about twenty yards back from the road. All the occupants of the house were made prisoner and as the farm workers arrived, they were also held.</p>
+                    <figure class="article-image article-image-right w-100 w-md-50">
+                        <picture>
+                            <source media="(min-width: 767px)" srcset="../image/article_images/Toureen.jpg">
+                            <img src="../image/article_images/Toureen_small.jpg" alt="Toureen ambush site"/>
+                        </picture>
+                        <figcaption>Site of the Toureen ambush showing the house owned by the Roberts family</figcaption>
+                    </figure>
+                    <p>
+                        The plan of attack was reviewed once again. Unarmed men were to signal the approach of the lorries. Two riflemen each were to cover the western and eastern flank of the column. The rear flank was also protected by two riflemen. While two lorries were expected, provision had to be made to attack a third. Therefore, another five men were sent to occupy positions about sixty yards west of the point where the attack on the second lorry was planned.</p>
+                    <p>
+                        This meant that there were only twenty one riflemen to attack the first two lorries which normally carried about thirty soldiers. Nine men, with Liam Deasy in charge, were placed eighty yards east of Roberts' house, behind the ditch on the southern side of the road. Closer to the house, hidden behind a hedge, were Charlie Hurley and two riflemen. He was to explode mine under the first lorry, and then his small party and the eastern section were to open fire on the occupants, if that was needed to ensure their surrender. Sixty yards west of where the mine was placed, and behind a large timber gate which opened from the farmyard on to the road, a section of ten riflemen were in position to attack the second lorry. Ropes were fixed on the gate, which was to remain loosely closed until  When the rear of the first lorry was in line with it ropes attached to the gate were to be pulled immediately, and when the gate flew open, five men kneeling and five standing directly behind them were to be ready to fire a volley at their target, at a distance of only five or six yards. This aspect of the plan was practiced at least half-a-dozen times in order that there could be no slip-up. This section was expected to deal with the second lorry without help. By 8 a.m. all men were posted.</p>
+                    <p>
+                        A little more than an hour later the scouts signalled the approach of the British convoy, and soon the waiting volunteers could hear the noise of its engines. On that morning only two lorries had set out from Bandon, the first, carrying a sergeant, six soldiers and a civilian court witness. The second lorry was occupied, according to British sources, by Lieutenant Dixon, attached to the 1st Essex regiment, a driver and six soldiers.</p>
+                    <p>
+                        As the first British lorry passed over the mine Charlie Hurley depressed the plunger of his exploder. Nothing happened and the lorry drove on towards Cork City. Deasy's party, who were awaiting the explosion of the mine before opening fire, allowed this vehicle to pass them unscathed, and managed only to fire a few ineffectual rounds at its receding tailboard.</p>
+                    <p>
+                        Almost immediately the second lorry appeared and as her bonnet showed the order to fire was given. The volley sounded as one long loud shot. A three pound bomb was also thrown, which landed right in the body of the lorry but did not explode. The lorry skidded to a halt on the side of the road twenty yards from the gate, and the soldiers leaped out, led by their officer, Captain Dickson, and the fight was on. The enemy opened fire as they lay on the road facing the gate section.</p>
+                    <p>
+                        The IRA men moved from behind the gate out on to the road. They now faced the Essex, whose shooting appeared to be wayward. Volley after volley was fired by the volunteers. Captain Dickson was shot through the head as he fired his revolver and soon more British soldiers were hit, some fatally. Before long the remainder of the British surrendered, raising their hands over their heads. Immediately the whistle to cease fire was blown and an order was given to divest the enemy of their arms and equipment.</p>
+                    <p>
+                        The Brigade Commander came on to the road. He was disgusted at the failure of the mine and the escape of the first lorry. That lorry sped on and never halted until it reached Victoria Barracks in Cork city.</p>
+                    <p>
+                        Five of the enemy were dead, including Captain Dickson and four were wounded. Fourteen rifles, bayonets, equipment, some Mills bombs, fourteen hundred rounds, as well as the officers' revolvers and equipment were secured from them. Not one of the IRA was hit. The members of the Column helped to make the wounded Essex comfortable and supplied bandages to the unwounded for their comrades. An Essex sergeant, who was now in charge, thanked the IRA for their fair treatment. The dead were pulled away from the vicinity of the lorry which was sprinkled with petrol and set alight.</p>
+                    <p>
+                        Within fifteen minutes of the opening of the attack, the IRA column had re-assembled and quickly moved off in the direction of Kilbrittain.</p>
+                </article>
+                <section id="location" class="tab-pane fade in">
+                    <h2>Google Maps</h2>
+                    <div id="map" class="embedded-google-maps"></div>
+                </section>
+            </div>
         </div>
         <aside class="col-12 col-md-4 col-lg-3 sidebar-related">
             <header>
                 Related Articles
             </header>
+            <section>
+                <h3>Dillon's Cross</h3>
+                <img src="../image/article_images/Dillons_Cross_thumb.jpg" alt="Dillon's Cross">
+                <p>On December 11th, 1920, the day after martial law was proclaimed, a six-man IRA squad from the 1st. Battalion, ambushed a convoy from K Company of the Auxiliary Division at Dillon’s Cross, not far from Victoria Barracks in Cork City.</p>
+                <a href="articles/dillonscross.html">Read More</a>
+            </section>
+            <section>
+                <h3>Crossbarry</h3>
+                <img src="../image/article_images/Crossbarry_Monument_thumb.jpg" alt="Crossbarry Monument">
+                <p>On March 19, 1921, the Third West Cork Flying Column of the IRA, under the command of the legendary Commandant General Tom Barry, achieved an extremely significant victory at Crossbarry, situated about twelve miles south-west of Cork city.</p>
+                <a href="articles/crossbarry.html">Read More</a>
+            </section>
         </aside>
     </section>
     <footer>

@@ -1,5 +1,6 @@
 html, body{
   height: 100%;
+  min-width: 350px;
 }
 
 #pageBodyContainer {
@@ -13,6 +14,7 @@ html, body{
     //flex: 1 1 auto;
     width: 100%;
     max-width: map_get($container-max-widths, xl);
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
   }
 }
