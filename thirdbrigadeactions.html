@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="description" content="An account of the Anglo-Irish War focusing on events in Cork city and county from 1918 to the truce in July 1921">
+    <title>Cork's War of Independence</title>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap-custom.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">
+        <img id="siteLogo" src="image/logo-alternative.svg" alt="CWI Logo" title="Cork's War of Independence">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="brigademap.html">Brigade Map</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Brigade Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="firstbrigadeactions.html">First brigade</a>
+                    <a class="dropdown-item" href="secondbrigadeactions.html">Second Brigade</a>
+                    <a class="dropdown-item active" href="thirdbrigadeactions.html">Third Brigade <span class="sr-only">(current)</span></a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Who's Who
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="#">First brigade</a>
+                    <a class="dropdown-item" href="#">Second Brigade</a>
+                    <a class="dropdown-item" href="#">Third Brigade</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Links</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="input-group search-group">
+                <input id="searchBox" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light" type="submit">Go</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<main class="container-fluid" id="pageBodyContainer">
+    <section class="page-body row">
+        <div class="col-12 col-md-8 col-lg-9">
+            <article class="brigade-actions-timeline">
+                <h1>First Brigade Actions</h1>
+                <details open>
+                    <summary><h2>Pre 1920</h2></summary>
+                    <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Nov 17, 1919</td>
+                            <td><a href="#">Assault on naval sloop at Bantry Bay leads to capture of arms and ammunition</a>.</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 14, 1919</td>
+                            <td><a href="#">RIC constable shot dead near Kilbrittain barracks.</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details open>
+                    <summary><h2>1920</h2></summary>
+                    <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Feb 12, 1920</td>
+                            <td><a href="#">Attack on Allihies RIC Barracks - one RIC man killed.</a></td>
+                        </tr>
+                        <tr>
+                            <td>April 23, 1920</td>
+                            <td>DMP member shot dead near Clonakilty.</td>
+                        </tr>
+                        <tr>
+                            <td>April 25, 1920</td>
+                            <td><a href="#">Two RIC men shot dead in ambush at Ballinspittal.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 10, 1920</td>
+                            <td>Three RIC men shot dead in ambush near Timoleague.</td>
+                        </tr>
+                        <tr>
+                            <td>June 12, 1920</td>
+                            <td>Shooting dead of RIC constable Thomas King near Glengarriff.</td>
+                        </tr>
+                        <tr>
+                            <td>June 21, 1920</td>
+                            <td>One killed and two wounded in attack on RIC near Bantry.</td>
+                        </tr>
+                        <tr>
+                            <td>June 24, 1920</td>
+                            <td>Series of retaliatory attacks by RIC members in Bantry area.</td>
+                        </tr>
+                        <tr>
+                            <td>July 25, 1920</td>
+                            <td><a href="#">Shooting of Detective Sergeant Mulhearn at Bandon.</a></td>
+                        </tr>
+                        <tr>
+                            <td>July 25, 1920</td>
+                            <td>Two marines shot dead in attack on Ballycrovane coastguard station.</td>
+                        </tr>
+                        <tr>
+                            <td>July 27, 1920</td>
+                            <td>RIC constable James Murray shot dead in Clonakilty's Main Street.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 8, 1920</td>
+                            <td>Cycle patrol of British troops ambushed near Ballyvourney.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 22, 1920</td>
+                            <td><a href="#">IRA volunteer shot dead during ambush on RIC at Lissarda.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Aug 24, 1920</td>
+                            <td>RIC constable John McNamara shot dead in ambush on patrol at Glengarriff.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 25, 1920</td>
+                            <td>RIC constable Matthew Haugh shot dead in ambush on patrol at Bantry.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 26, 1920</td>
+                            <td>Lt. Tim Fitzgerald is first member of 3rd. Brigade to die in action.</td>
+                        </tr>
+                        <tr>
+                            <td>Sept 5, 1920</td>
+                            <td><a href="#">Vol. Liam Hegarty shot dead by British forces at Ballymakeera.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 4, 1920</td>
+                            <td>Capture of Schull RIC barracks.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 9, 1920</td>
+                            <td>Detachment of the Essex Regiment ambushed at Newcestown.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 17, 1920</td>
+                            <td>Civilian James Lehane shot dead by Auxiliaries at Ballymakeera.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 21, 1920</td>
+                            <td>Two Black and Tans shot dead in ambush near Glandore.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 26, 1920</td>
+                            <td><a href="#">Successful ambush at Toureen.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 31, 1920</td>
+                            <td>Third Brigade IRA Flying Column formed - Tom Barry appointed Commander.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 6, 1920</td>
+                            <td>Two Auxiliaries kidnapped and shot dead near Macroom.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 21, 1920</td>
+                            <td>Fatal attack on party of Black and Tans at Leap.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 28, 1920</td>
+                            <td><a href="#">Auxiliaries defeated at Kilmichael Ambush.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 2, 1920</td>
+                            <td><a href="#">Three West Cork Brigade officers shot dead by Essex Regiment in Bandon.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 2, 1920</td>
+                            <td>IRA Volunteer Michael McLeane shot dead during ambush on military at Schull.</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 15, 1920</td>
+                            <td><a href="#">Shooting of Canon Magner and Tadgh Crowley near Dunmanway.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 31, 1920</td>
+                            <td>Kilbrittain RIC barracks attacked.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details open>
+                    <summary><h2>1921</h2></summary>
+                    <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Jan 15, 1921</td>
+                            <td>Second attack on Kilbrittain RIC barracks.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 23, 1921</td>
+                            <td>Simultaneous attacks on military and RIC barracks at Bandon.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 25, 1921</td>
+                            <td><a href="#">Innishannon RIC barracks attacked.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 1, 1921</td>
+                            <td>RIC man killed and another wounded in attack on patrol at Drimoleague.</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 2, 1921</td>
+                            <td><a href="#">Firefight at Burgatia House, Rosscarbery.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 15, 1921</td>
+                            <td><a href="#">Major loss of life in train ambush at Upton station, West Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 16, 1921</td>
+                            <td><a href="#">Four volunteers killed by British forces near Kilbrittain, West Cork. </a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 23, 1921</td>
+                            <td><a href="#">Attacks on British army and RIC in Bandon by West Cork Flying Column.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 28, 1921</td>
+                            <td>Black and Tan killed when patrol is fired upon at Rosscarbery.</td>
+                        </tr>
+                        <tr>
+                            <td>March 19, 1921</td>
+                            <td><a href="articles/crossbarry.html">Major victory for IRA at the Battle of Crossbarry.</a></td>
+                        </tr>
+                        <tr>
+                            <td>March 31, 1921</td>
+                            <td><a href="#">Rosscarbery RIC barracks destroyed in attack.</a></td>
+                        </tr>
+                        <tr>
+                            <td>April 8, 1921</td>
+                            <td><a href="#">Black and Tan shot dead in ambush near Macroom</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 3, 1921</td>
+                            <td>Two Black and Tans killed in gun and bomb attack at Clonakilty.</td>
+                        </tr>
+                        <tr>
+                            <td>May 14, 1921</td>
+                            <td><a href="#">Black and Tan shot dead at Innishannon.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 15, 1921</td>
+                            <td><a href="#">Black and Tan shot dead near Skibbereen.</a></td>
+                        </tr>
+                        <tr>
+                            <td>June 28, 1921</td>
+                            <td><a href="#">Successful raid for arms at Fastnet Rock lighthouse.</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </article>
+        </div>
+        <aside class="col-12 col-md-4 col-lg-3 sidebar-related">
+            <header>
+                Related Articles
+            </header>
+        </aside>
+    </section>
+    <footer>
+        Site Copyright 2020 | Contact | About
+    </footer>
+</main>
+</body>
+</html>

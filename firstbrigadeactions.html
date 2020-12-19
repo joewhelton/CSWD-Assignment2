@@ -2,9 +2,478 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="description" content="An account of the Anglo-Irish War focusing on events in Cork city and county from 1918 to the truce in July 1921">
+    <title>Cork's War of Independence</title>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap-custom.css">
+
 </head>
 <body>
-
+<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">
+        <img id="siteLogo" src="image/logo-alternative.svg" alt="CWI Logo" title="Cork's War of Independence">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="brigademap.html">Brigade Map</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Brigade Actions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" href="firstbrigadeactions.html">First brigade <span class="sr-only">(current)</span></a>
+                    <a class="dropdown-item" href="secondbrigadeactions.html">Second Brigade</a>
+                    <a class="dropdown-item" href="thirdbrigadeactions.html">Third Brigade</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Who's Who
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <a class="dropdown-item" href="#">First brigade</a>
+                    <a class="dropdown-item" href="#">Second Brigade</a>
+                    <a class="dropdown-item" href="#">Third Brigade</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Links</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="input-group search-group">
+                <input id="searchBox" class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light" type="submit">Go</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<main class="container-fluid" id="pageBodyContainer">
+    <section class="page-body row">
+        <div class="col-12 col-md-8 col-lg-9">
+            <article class="brigade-actions-timeline">
+                <h1>First Brigade Actions</h1>
+                <details open>
+                    <summary><h2>Pre 1920</h2></summary>
+                    <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Sep 3, 1917</td>
+                            <td><a href="#"> Successful raid for weapons by Volunteers on Cork Grammar School at Wellington Road.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 11, 1918</td>
+                            <td><a href="#"> Donnachada MacNiallghuis rescued from Cork Jail.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 18, 1919</td>
+                            <td><a href="#"> IRA raid Murray's gun shop at Patrick Street for arms and ammunition.</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details open>
+                    <summary><h2>1920</h2></summary>
+                    <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Jan 3, 1920</td>
+                            <td><a href="#"> Capture of Carrigtwohill RIC Barracks in East Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 30, 1920</td>
+                            <td><a href="#"> Tomas MacCurtain, Officer Commanding Cork No. 1 Brigade, elected Lord Mayor of Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 9, 1920</td>
+                            <td><a href="#"> Capture of Castlemartyr RIC Barracks in East Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 17, 1920</td>
+                            <td><a href="#">IRA attack RIC despatch party near Union Quay, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar, 1920</td>
+                            <td><a href="#"> Black and Tans arrive in Ireland. In Cork city, they establish their headquarters at Empress Place, Summerhill.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 11, 1920</td>
+                            <td><a href="#"> RIC District Inspector McDonagh shot and seriously wounded.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 11, 1920</td>
+                            <td><a href="#"> RIC member Timothy Scully shot dead at Glanmire.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 19, 1920</td>
+                            <td><a href="#"> Shooting of RIC Constable Murtagh at Popes Quay, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 20, 1920</td>
+                            <td><a href="#"> Tomas MacCurtain shot dead at his home at Thomas Davis Street.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 31, 1920</td>
+                            <td><a href="#"> Terence MacSwiney elected Lord Mayor of Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Apr 5, 1920</td>
+                            <td>Burning of income tax offices at South Mall and South Terrace and Togher RIC barracks in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>May 8, 1920</td>
+                            <td><a href="#">Capture of Cloyne RIC Barracks in East Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 11, 1920</td>
+                            <td><a href="#">RIC Sergeant Garvey and Constable Harrington shot dead.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 12, 1920</td>
+                            <td>Burning of Commons Road RIC barracks in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 1, 1920</td>
+                            <td><a href="#">Blarney RIC barracks attacked by large party of IRA..</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 1, 1920</td>
+                            <td>bush of Cameron Regiment near Midleton in East Cork</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 11, 1920</td>
+                            <td><a href="#">Attack on Carrigadrohid RIC barracks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 21, 1920</td>
+                            <td><a href="#">Attack on Farran RIC barracks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 24, 1920</td>
+                            <td><a href="#">Blackrock RIC barracks, on outskirts of Cork City, is attacked and set on fire.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 2, 1920</td>
+                            <td>Military vehicle from Victoria Barracks hijacked at Cork Railway Station.</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 12, 1920</td>
+                            <td><a href="#">Three RIC barracks burned - at King Street, St. Lukes and Lower Glanmire Road, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 15, 1920</td>
+                            <td><a href="#"> Two British Army lorries captured and burned at Dennehy's Cross, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 17, 1920</td>
+                            <td><a href="#">Divisional Commissioner Gerald Bryce-Ferguson Smyth shot dead by the IRA at County Club, South Mall. </a></td>
+                        </tr>
+                        <tr>
+                            <td>Aug 21, 1920</td>
+                            <td><a href="#">Shooting dead of RIC Sergeant Daniel Maunsell at Inchigeelagh</a></td>
+                        </tr>
+                        <tr>
+                            <td>Aug 4, 1920</td>
+                            <td>In Blackpool, the first of a week-long series of gun attacks on British curfew patrols in the city takes place.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 6, 1920</td>
+                            <td><a href="#">Ambush of Cameron Highlanders at Whiterock, Midleton.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Aug 11, 1920</td>
+                            <td>Republican prisoners at Cork gaol begin hunger strike.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 12, 1920</td>
+                            <td>City Hall raided by British army personnel. Terence McSweeney arrested - begins hunger strike.</td>
+                        </tr>
+                        <tr>
+                            <td>Aug 22, 1920</td>
+                            <td><a href="#">RIC District Inspector Swanzy shot dead in Lisburn by members of Cork No. 1 Brigade IRA.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Sep, 1920</td>
+                            <td>Full time city Active Service Unit formed from the 1st and 2nd Battalions, No. 1 Brigade.</td>
+                        </tr>
+                        <tr>
+                            <td>Sep 24, 1920</td>
+                            <td><a href="#">Failed attempted capture of General Strickland at McCurtain Street</a>.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 3, 1920</td>
+                            <td><a href="#">Shooting of RIC Constable Chave at Patrick Street, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 8, 1920</td>
+                            <td>One British Auxiliary shot dead and another injured in attack in Cork city centre.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 8, 1920</td>
+                            <td><a href="#">One British soldier killed and three wounded in attack on military lorry at Barrack Street, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 25, 1920</td>
+                            <td><a href="#"> Sean O'Hegarty assumes command of Cork No. 1 Brigade IRA.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 25, 1920</td>
+                            <td><a href="#">Death of Volunteer Joe Murphy on hunger strike at Cork Prison.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oct 25, 1920</td>
+                            <td>Death of Terence MacSwiney on hunger strike at Brixton Prison.</td>
+                        </tr>
+                        <tr>
+                            <td>Oct 29, 1920</td>
+                            <td>Two Royal Artillery intelligence officers shot dead by IRA near Glenville, north of Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 16, 1920</td>
+                            <td>Three British army officers shot dead by IRA at Waterfall, on outskirts of Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 18, 1920</td>
+                            <td><a href="#">RIC Sergeant J. O'Donoghue shot dead at White Street.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 18, 1920</td>
+                            <td>Three civilians shot dead by Black and Tans at Broad Street, Broad Lane and North Mall in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 21, 1920</td>
+                            <td>Week-long spate of bomb and arson attacks by Anti Sinn Fein Society begins in Cork city centre.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 23, 1920</td>
+                            <td>Three members of Cork No. 1 Brigade IRA killed in explosion at Patrick Street, Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 23, 1920</td>
+                            <td>British army intelligence officer shot dead by IRA near Ballincollig.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 27, 1920</td>
+                            <td><a href="#">Volunteer William Heffernan shot dead by British forces at Castlemartyr.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Nov 27, 1920</td>
+                            <td>Parish halls in Cork city at Blackrock and Douglas burned down by Anti Sinn Fein Society.</td>
+                        </tr>
+                        <tr>
+                            <td>Nov 30, 1920</td>
+                            <td>Thomas Ashe (Sinn Fein) Club, Morrison's Island, burned down by British sympathisers.</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 3, 1920</td>
+                            <td><a href="#">RIC constable Maurice Prendeville shot dead at Youghal.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 11, 1920</td>
+                            <td><a href="#">Daring escape by Volunteers in Cloyne.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 11, 1920</td>
+                            <td><a href="#">Delaney brothers shot dead by British forces at Dublin Hill, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 11, 1920</td>
+                            <td><a href="#">Auxiliaries ambushed at Dillons Cross.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 12, 1920</td>
+                            <td><a href="#">Burning of Cork city centre and City Hall.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dec 28, 1920</td>
+                            <td>Offices and machinery of Cork Examiner newspaper destroyed.</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 29, 1920</td>
+                            <td>Three Black and Tans shot dead and three seriously wounded in IRA attack at Midleton's Main Street.</td>
+                        </tr>
+                        <tr>
+                            <td>Dec 29, 1920</td>
+                            <td>Black and Tan reinforcements suffer casualties when ambushed at Mile Bush near Midleton.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+                <details open>
+                    <summary><h2>1921</h2></summary>
+                <table class="table table-striped timeline-table">
+                        <tbody>
+                        <tr>
+                            <td>Jan 1, 1921</td>
+                            <td>First 'official' British reprisals are carried out in Midleton.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 4, 1921</td>
+                            <td><a href="#">Parnell Bridge ambush - Two RIC members shot dead and five wounded. Five civilians also wounded.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 10, 1921</td>
+                            <td>Constables Carroll and Sheehan of the RIC shot and wounded in IRA attack in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 21, 1921</td>
+                            <td>RIC Sergeant Bloxham shot dead and Head Constable Larkin wounded in ambush at Waterfall.</td>
+                        </tr>
+                        <tr>
+                            <td>Jan 28, 1921</td>
+                            <td><a href="#">IRA suffer losses at Dripsey Ambush, ten miles west of Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb, 1921</td>
+                            <td>Separate Cork city command of the IRA formed - Thomas Crofts appointed Officer Commanding.</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 2, 1921</td>
+                            <td>Captain Joseph Murphy, No 2. Brigade IRA, executed at Victoria Barracks, Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 3, 1921</td>
+                            <td><a href="#">Three Black and Tans shot dead in ambush at Ballinhassig, about seven miles west of Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 20, 1921</td>
+                            <td><a href="#">I.R.A. suffer major losses at Clonmult in East Cork.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 25, 1921</td>
+                            <td><a href="#">Ambush of Auxiliaries at Coolnacahera (Coolavokig), on the road between Ballyvourney and Macroom.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 28, 1921</td>
+                            <td>Six members of the IRA executed at the military detention barracks in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 28, 1921</td>
+                            <td><a href="#">Series of retaliatory attacks against British forces in Cork city - six soldiers killed and at least six wounded.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 28, 1921</td>
+                            <td><a href="#">Setback for IRA in foiled Passage West ambush.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 1, 1921</td>
+                            <td><a href="#">Charles Daly of C Company, 2nd Battalion, Cork No. 1 Brigade IRA, shot dead.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 23, 1921</td>
+                            <td><a href="#">Black and Tans kill six members of Cork No. 1 Brigade at Clogheen, on the outskirts of Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Apr 10, 1921</td>
+                            <td>British troops wounded when land mine explodes under their lorry at Churchtown North, near Midleton.</td>
+                        </tr>
+                        <tr>
+                            <td>Apr 17, 1921</td>
+                            <td><a href="#">RIC Constable John Cyril MacDonald shot dead at Cove Street, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Apr 19, 1921</td>
+                            <td><a href="#">Tadhg O'Sullivan of C Company, 2nd Battalion, Cork No. 1 Brigade IRA shot dead.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Apr 29, 1921</td>
+                            <td><a href="#">Dramatic rescue of three IRA officers from Spike Island.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 8, 1921</td>
+                            <td><a href="#">RIC Constable Fredrick Sterland shot dead at Cook Street, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 8, 1921</td>
+                            <td><a href="#">British troops take over Moore's Hotel and Hibernian Hall in Cork city for use as military outposts.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 8, 1921</td>
+                            <td><a href="#">Local man Willie Brandsfield shot dead at Carrigtwohill by soldiers from the Cameron Highlanders regiment.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 14, 1921</td>
+                            <td>Five members of the security forces shot dead by the IRA in Midleton.</td>
+                        </tr>
+                        <tr>
+                            <td>May 14, 1921</td>
+                            <td><a href="#">Three RIC members killed in ambush at Watercourse Road, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 15, 1921</td>
+                            <td><a href="#">In Carrigtwohill, three men are taken from their homes and shot dead by the Cameron Highlanders.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 16, 1921</td>
+                            <td><a href="#">Father James O'Callaghan murdered by Black and Tans at the home of Liam de Roiste, TD.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 23, 1921</td>
+                            <td><a href="#">Stephen Dorman, E Company, 2nd Battalion, Cork No. 1 Brigade IRA shot dead at Douglas Street.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 25, 1921</td>
+                            <td>Houses at Shandon Street and Blackpool burned in retaliation for attacks on crown forces in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>May 28, 1921</td>
+                            <td><a href="#">Dairmuid O'Hurley East Cork battalion column leader shot dead by Black and Tans.</a></td>
+                        </tr>
+                        <tr>
+                            <td>May 31, 1921</td>
+                            <td><a href="#">Bomb attack on band members of 2nd. Hampshire regiment at Youghal - seven killed and ten wounded.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 24, 1921</td>
+                            <td>RIC barracks at Tuckey Street, Shandon Street and Douglas burned in Cork city.</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 27, 1921</td>
+                            <td><a href="#">IRA Commandant Leo Murphy shot dead by Black and Tans at Waterfall, a few miles west of Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 3, 1921</td>
+                            <td><a href="#">British forces suffer a number of casualties in landmine explosion at Carrigshane Cross, near Midleton.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 7, 1921</td>
+                            <td><a href="#">RIC member shot dead at Ballinhassig .</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 8, 1921</td>
+                            <td><a href="#">Denis Spriggs shot dead at Blarney Road, Cork city.</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 10, 1921</td>
+                            <td><a href="#">Four British soldiers shot dead at the Lough, Cork city.</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </article>
+        </div>
+        <aside class="col-12 col-md-4 col-lg-3 sidebar-related">
+            <header>
+                Related Articles
+            </header>
+        </aside>
+    </section>
+    <footer>
+        Site Copyright 2020 | Contact | About
+    </footer>
+</main>
 </body>
 </html>

@@ -6,9 +6,12 @@ html, body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
 
   .page-body {
     //flex: 1 1 auto;
+    width: 100%;
     max-width: map_get($container-max-widths, xl);
     padding-bottom: 1rem;
   }
